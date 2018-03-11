@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://www.tensorflow.org/images/tf_logo_transp.png"><br><br>
+  <img src="http://cdn.wittysparks.com/wp-content/uploads/2017/08/09210754/Machine-Learning.jpg"><br><br>
 </div>
 
 -----------------

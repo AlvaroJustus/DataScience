@@ -5,9 +5,8 @@
 -----------------
 
 
-| **`Documentation`** |
-|-----------------|---------------------|------------------|-------------------|---------------|---------------|
-| [![Scikit-Learn](https://img.shields.io/david/expressjs/express.svg)](http://scikit-learn.org/stable/)
+| **`Scikit-Learn`** |
+[![Scikit-Learn](https://img.shields.io/david/expressjs/express.svg)](http://scikit-learn.org)
 
 **TensorFlow** is an open source software library for numerical computation using
 data flow graphs.  The graph nodes represent mathematical operations, while

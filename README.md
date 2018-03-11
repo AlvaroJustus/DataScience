@@ -9,20 +9,20 @@
 |--------------------|
 [![Scikit-Learn](https://elitedatascience.com/wp-content/uploads/2016/11/sklearn-logo.png)](http://scikit-learn.org)
 
-### **Wine Quality Analysis**
+# **Wine Quality Analysis**
 
-# **Abstract**
+## **Abstract**
 This work aims to perform an exploratory analysis in a database on the quality of red wines. The database consists 
 of wine samples from the north of Portugal, provided by the Viticulture Commission of the Vinho Verde Region (CVRVV). 
 The goal is to model wine quality based on physicochemical tests (see [Cortez et al., 2009](http://www3.dsi.uminho.pt/pcortez/wine/)) using machine learning techniques and models to classify and predict dataset data. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).
 
 ## Source
 * [Paulo Cortez, University of Minho, Guimarães, Portugal](http://www3.dsi.uminho.pt/pcortez).
-* A. Cerdeira, F. Almeida, T. Matos and J. Reis, Viticulture Commission of the Vinho Verde Region(CVRVV), Porto, Portugal @2009.
+* [A. Cerdeira, F. Almeida, T. Matos and J. Reis, Viticulture Commission of the Vinho Verde Region(CVRVV), Porto, Portugal @2009(http://www.vinhoverde.pt/en/).
 * [UCI Machine Learning Repository Wine Quality Data Set](https://archive.ics.uci.edu/ml/datasets/Wine+Quality).
 
 
-## Nightly pip packages ##
+## Data Information ##
 * We are pleased to announce that TensorFlow now offers nightly pip packages
 under the [tf-nightly](https://pypi.python.org/pypi/tf-nightly) and
 [tf-nightly-gpu](https://pypi.python.org/pypi/tf-nightly-gpu) project on pypi.

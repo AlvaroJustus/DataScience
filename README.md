@@ -5,15 +5,13 @@
 -----------------
 
 
-| **`Scikit-Learn`** |
-[![Scikit-Learn](https://img.shields.io/david/expressjs/express.svg)](http://scikit-learn.org)
+| **`Scikit-Learn`** | 
+|[![Scikit-Learn](https://img.shields.io/david/expressjs/express.svg)](http://scikit-learn.org)|
 
-**TensorFlow** is an open source software library for numerical computation using
-data flow graphs.  The graph nodes represent mathematical operations, while
-the graph edges represent the multidimensional data arrays (tensors) that flow
-between them.  This flexible architecture lets you deploy computation to one
-or more CPUs or GPUs in a desktop, server, or mobile device without rewriting
-code.  TensorFlow also includes TensorBoard, a data visualization toolkit.
+
+This work aims to perform an exploratory analysis in a database on the quality of red wines. The database consists 
+of wine samples from the north of Portugal, provided by the Viticulture Commission of the Vinho Verde Region (CVRVV). 
+The goal is to model wine quality based on physicochemical tests (see [Cortez et al., 2009], [!Web Link](http://www3.dsi.uminho.pt/pcortez/wine/)).
 
 TensorFlow was originally developed by researchers and engineers
 working on the Google Brain team within Google's Machine Intelligence Research

@@ -7,7 +7,7 @@
 
 | **`Scikit-Learn`** |
 |--------------------|
-[![Scikit-Learn](https://raw.githubusercontent.com/mdbecker/static_files/master/pycon/scikit-learn-logo.png)](http://scikit-learn.org)
+[![Scikit-Learn](https://elitedatascience.com/wp-content/uploads/2016/11/sklearn-logo.png)](http://scikit-learn.org)
 
 ### Wine Quality Analysis
 

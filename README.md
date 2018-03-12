@@ -173,7 +173,7 @@ plt.title('Residual Sugar')
 * **Click on the image to enlarge it**. Finally a pairplot, relating the distributions of all variances with each other, divided by the quality of the wines. I really like this chart and I consider it of utmost importance to check which method best applies to handle a dataset. You can see that there is a lot of data overlapping and a strong grouping, which means that it will be difficult to classify data so precisely. However, since quality is given discreetly and the output of the model is based on it, it may be possible to obtain good results without the need to transform the quantitative data (from 0 to 10) to qualitative (bad, intermediate and good) data.
 
 ## Pré-Conclusion
-* Due to the way the data are arranged, my previous conclusion is that a random forest model will be the one that will have the best performance in this data. This is based on how the output (quality) is modeled. However, for the study purpose, we will apply several models of machine learning in this data.
+* Due to the way the data are arranged, my previous conclusion is that a **Random Forest Model** will be the one that will have the best performance in this data. This is based on how the output (quality) is modeled. However, for the study purpose, we will apply several models of machine learning in this data.
 
 
 ## For more information

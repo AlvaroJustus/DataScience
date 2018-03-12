@@ -242,6 +242,11 @@ SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
 
 avg / total       0.54      0.57      0.54       480
 ```
+
+* In this topic a **warning** is valid, The **GridSearchCV** code may take a long time to run, it works as a genetic algorithm that looks for the best parameters (user-selected) to minimize model errors.
+
+* Our focus adopted in this case, when working with classification models is the accuracy of the model. In the above case accuracy was 54%.
+
 ### Apply GSCV (GridSearchCV) on SVMC
 
 ```python
@@ -352,7 +357,7 @@ RMSE: 0.637673663163
     plt.plot(range(0,480),y_test-grid_predictions,c='r')
     plt.legend()
 ```
-* **WARNING: This code [grid.fit(X_train,y_train)] may take a long time to run, it works as a genetic algorithm that looks for the best parameters (user-selected) to minimize model errors. On my computer the code took about 2 hours to execute completely with the parameters placed above.**
+* **WARNING: On my computer the code took about 2 hours to execute completely with the parameters placed above.**
 
 ![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/12.png)
 

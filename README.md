@@ -265,6 +265,26 @@ avg / total       0.54      0.57      0.54       480
 avg / total       0.59      0.62      0.60       480
 ```
 
+### SVMR (Support Vector Machine Regression) Model without knowing the parameters
+
+```python
+>>> from sklearn.svm import SVR
+>>> SVMR_rbf = SVR(kernel='rbf')
+>>> SVMR_lin.fit(X_train,y_train)
+SVR(C=1.0, cache_size=200, coef0=0.0, degree=3, epsilon=0.1, gamma='auto',
+  kernel='linear', max_iter=-1, shrinking=True, tol=0.001, verbose=False)
+>>> ypred_rbf = SVMR_rbf.predict(x_test)
+ypred_lin = SVMR_lin.predict(x_test)
+>>> plt.figure(figsize=(16, 8))
+   plt.scatter(range(0,480), y_test, color='darkorange', label='data')
+   plt.plot(range(0,480), ypred_rbf, color='navy', lw=2, label='RBF model')
+   plt.plot(range(0,480), ypred_lin, color='c', lw=2, label='Linear model')
+   plt.xlabel('data')
+   plt.ylabel('target')
+   plt.title('Support Vector Regression')
+   plt.legend()
+```
+![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/9.png)
 
 ## License
 

@@ -59,9 +59,7 @@ Output variable (based on sensory data):
 * Consists of identifying the model that best applies to classify and predict data using input classes to predict output (quality), using machine learning models in Python. Libraries will be used to provide support for the implementation of these models, such as Pandas, Seaborn and the famous Scikit-learn. For this, a preliminary and an exploratory analysis will be performed on the data, to understand the behavior of the variables, how their relationships are and what the best technique of machine learning to apply.
 
 ### Data Import and Preview: 
-```shell
-$ python
-```
+
 ```python
 >>> import pandas as pd
 >>> import matplotlib.pyplot as plt

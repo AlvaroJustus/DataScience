@@ -286,6 +286,16 @@ ypred_lin = SVMR_lin.predict(x_test)
 ```
 ![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/9.png)
 
+```python
+>>> plt.figure(figsize=(16,8))
+    sns.distplot((y_test-ypred_rbf),bins=50,label='RBF model')
+    sns.distplot((y_test-ypred_lin),bins=50, label='Linear model')
+    plt.legend()
+    plt.title('Residual Histogram')
+```
+![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/10.png)
+
+
 ## License
 
 [MIT](LICENSE)

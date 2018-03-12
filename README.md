@@ -129,6 +129,23 @@ plt.title('Residual Sugar')
 ```python
 >>> sns.jointplot(x='quality', y='residual sugar',data=wine,size=9, color='r',alpha=0.6)
 ```
+![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/3.png)
+
+* The graph presented above consists of the relation of the residual sugar and the quality attributed to the wine. In this graph it is possible to analyze where the data are concentrated when relating these two parameters and how their distributions are related. It is also possible to see the way the data divides, this already us clues as to the best method to apply in this dataset.
+
+```python
+>>> sns.barplot(x='quality',y='pH', data=wine)
+```
+![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/4.png)
+
+* The figure above shows the relationship between the quality attributed to wines and their pH's. At first the pH does not seem to vary much and nor is it a very important factor to classify the quality of the wine, since the values do not vary much. But it is important to check this information, we will do this in sequence.
+
+```python
+>>> plt.figure(figsize=(12,6))
+    sns.distplot(wine['pH'])
+```
+![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/5.png)
+
 
 #### *Try your first TensorFlow program*
 ```shell

@@ -393,6 +393,32 @@ avg / total       0.60      0.60      0.59       480
 
 ```
 
+#### Random Florest Model
+
+```python
+>>> from sklearn.ensemble import RandomForestClassifier
+>>> rfc = RandomForestClassifier(n_estimators=300)
+>>> rfc.fit(X_train, y_train)
+RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=300, n_jobs=1,
+            oob_score=False, random_state=None, verbose=0,
+            warm_start=False)
+>>> rfc_pred = rfc.predict(x_test)
+>>> print(classification_report(y_test,rfc_pred))
+             precision    recall  f1-score   support
+
+          3       0.00      0.00      0.00         3
+          4       0.00      0.00      0.00        16
+          5       0.77      0.81      0.79       200
+          6       0.68      0.75      0.71       199
+          7       0.59      0.52      0.55        56
+          8       0.00      0.00      0.00         6
+
+avg / total       0.67      0.71      0.69       480
+```
 
 
 ## License

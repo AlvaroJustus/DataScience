@@ -31,7 +31,7 @@ The goal is to model wine quality based on physicochemical tests (see [Cortez et
 * There are 12 classes that make up the dataset. There is no previous information about any class, so it is necessary to analyze the influence and relevance of each one.
 
 **Individual whl files**
-* For more information, read [Cortez et al., 2009](http://www3.dsi.uminho.pt/pcortez/wine/). 
+For more information, read [Cortez et al., 2009](http://www3.dsi.uminho.pt/pcortez/wine/). 
 Input variables (based on physicochemical tests):
 
 * 1 - fixed acidity
@@ -46,6 +46,7 @@ Input variables (based on physicochemical tests):
 * 10 - sulphates
 * 11 - alcohol
 **Output variable (based on sensory data):**
+
 *12 - quality (score between 0 and 10)
 
 

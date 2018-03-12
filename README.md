@@ -195,7 +195,7 @@ KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
            weights='uniform')
 >>> knn_pred= knn.predict(x_test)
 ```
-### Apply GSCV (GridSearchCV) on kNN
+### Apply GSCV (GridSearchCV) on kNN Model
 
 ```python
 >>> from sklearn.model_selection import GridSearchCV
@@ -327,7 +327,32 @@ RMSE: 0.631903830071
 ```
 * Mean absolute error (MAE):
 
-$$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
+### Apply GSCV (GridSearchCV) on SVMR Model
+
+```python
+>>> from sklearn.model_selection import GridSearchCV
+>>> param_svmr = {'kernel':['linear','rbf'],'C': [0.001, 0.01, 0.1, 1, 10, 100, 1000], 'gamma': [100, 10, 1, 0.1, 0.01, 0.001, 0.0001]}
+>>> grid = GridSearchCV(SVMR_rbf,param_svmr,refit=True,verbose=2)
+>>> grid.fit(X_train,y_train)
+>>> grid.best_params_
+{'C': 100, 'gamma': 100, 'kernel': 'linear'}
+>>> grid.best_estimator_
+SVR(C=100, cache_size=200, coef0=0.0, degree=3, epsilon=0.1, gamma=100,
+  kernel='linear', max_iter=-1, shrinking=True, tol=0.001, verbose=False)
+>>> grid_predictions = grid.predict(x_test)
+>>> print('MAE:', metrics.mean_absolute_error(y_test, grid_predictions))
+    print('MSE:', metrics.mean_squared_error(y_test, grid_predictions))
+    print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, grid_predictions)))
+    
+MAE: 0.499985652666
+MSE: 0.406627700692
+RMSE: 0.637673663163
+
+>>> plt.figure(figsize=(16,8))
+    plt.plot(range(0,480),y_test-grid_predictions,c='r')
+    plt.legend()
+```
+* **WARNING: This code [grid.fit(X_train,y_train)] may take a long time to run, it works as a genetic algorithm that looks for the best parameters (user-selected) to minimize model errors. On my computer the code took about 2 hours to execute completely with the parameters placed above.**
 
 
 ## License

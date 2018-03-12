@@ -474,4 +474,6 @@ avg / total       0.67      0.71      0.69       480
 [MIT](LICENSE)
 
 
-Developed by Álvaro Justus.
+
+|___________________________|
+|Developed by Álvaro Justus.|

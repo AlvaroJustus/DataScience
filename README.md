@@ -170,14 +170,100 @@ plt.title('Residual Sugar')
 ```
 ![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/8.png)
 
-* **Click on the image to enlarge it**. Finally a pairplot, relating the distributions of all variances with each other, divided by the quality of the wines. I really like this chart and I consider it of utmost importance to check which method best applies to handle a dataset. You can see that there is a lot of data overlapping and a strong grouping, which means that it will be difficult to classify data so precisely. However, since quality is given discreetly and the output of the model is based on it, it may be possible to obtain good results without the need to transform the quantitative data (from 0 to 10) to qualitative (bad, intermediate and good) data.
+* **Download and zoom to maximize**. Finally a pairplot, relating the distributions of all variances with each other, divided by the quality of the wines. I really like this chart and I consider it of utmost importance to check which method best applies to handle a dataset. You can see that there is a lot of data overlapping and a strong grouping, which means that it will be difficult to classify data so precisely. However, since quality is given discreetly and the output of the model is based on it, it may be possible to obtain good results without the need to transform the quantitative data (from 0 to 10) to qualitative (bad, intermediate and good) data.
 
 ## Pré-Conclusion
 * Due to the way the data are arranged, my previous conclusion is that a **Random Forest Model** will be the one that will have the best performance in this data. This is based on how the output (quality) is modeled. However, for the study purpose, we will apply several models of machine learning in this data.
 
 
-## For more information
+## Machine Learning Models
 
+```python
+>>> from sklearn.model_selection import train_test_split
+>>> x = wine.drop('quality',axis=1)
+>>> y= wine['quality']
+```
+
+### kNN (K-Nearest Neighbors) Model
+
+```python
+>>> from sklearn.neighbors import KNeighborsClassifier
+>>> knn = KNeighborsClassifier()
+>>> knn.fit(X_train,y_train)
+KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+           metric_params=None, n_jobs=1, n_neighbors=5, p=2,
+           weights='uniform')
+>>> knn_pred= knn.predict(x_test)
+```
+### Apply GSCV (GridSearchCV) on kNN
+
+```python
+>>> from sklearn.model_selection import GridSearchCV
+>>> param_gridknn = {'n_neighbors':range(1,100)}
+>>> gridknn = GridSearchCV(knn,param_gridknn,refit=True,verbose=2)
+>>> gridknn.fit(X_train,y_train)
+>>> gridknn.best_estimator_
+>>> gridknn.best_params_
+>>> gridknn_predictions = gridknn.predict(x_test)
+>>> from sklearn.metrics import classification_report,confusion_matrix
+>>> print(classification_report(y_test,gridknn_predictions))
+             precision    recall  f1-score   support
+
+          3       0.00      0.00      0.00         2
+          4       0.14      0.06      0.08        17
+          5       0.65      0.71      0.68       200
+          6       0.61      0.56      0.58       199
+          7       0.48      0.52      0.50        56
+          8       0.12      0.17      0.14         6
+
+avg / total       0.59      0.59      0.59       480
+```
+### SVMC (Support Vector Machine Classification) Model
+
+```python
+>>> from sklearn.svm import SVC
+>>> model = SVC()
+>>> model.fit(X_train,y_train)
+SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
+>>> predictions = model.predict(x_test)
+>>> print(classification_report(y_test,predictions))
+
+             precision    recall  f1-score   support
+
+          3       0.00      0.00      0.00         3
+          4       0.00      0.00      0.00        16
+          5       0.60      0.73      0.66       200
+          6       0.54      0.58      0.56       199
+          7       0.52      0.21      0.30        56
+          8       0.00      0.00      0.00         6
+
+avg / total       0.54      0.57      0.54       480
+```
+### Apply GSCV (GridSearchCV) on SVMC
+
+```python
+>>> param_gridsvc = {'C': [0.001, 0.01, 0.1, 1, 10, 100, 1000], 'gamma': [100, 10, 1, 0.1, 0.01, 0.001, 0.0001], 'kernel': ['rbf']} 
+>>> from sklearn.model_selection import GridSearchCV
+>>> grid = GridSearchCV(model,param_gridsvc,refit=True,verbose=3)
+>>> grid.fit(X_train,y_train)
+>>> grid.best_params_
+>>> grid.best_estimator_
+>>> grid_predictions = grid.predict(x_test)
+>>> print(classification_report(y_test,grid_predictions))
+             precision    recall  f1-score   support
+
+          3       0.00      0.00      0.00         3
+          4       0.00      0.00      0.00        16
+          5       0.66      0.80      0.73       200
+          6       0.60      0.62      0.61       199
+          7       0.52      0.30      0.38        56
+          8       0.00      0.00      0.00         6
+
+avg / total       0.59      0.62      0.60       480
+```
 
 
 ## License

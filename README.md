@@ -109,10 +109,10 @@ fixed acidity	volatile acidity	citric acid	residual sugar	chlorides	free sulfur 
 
 ## Data Exploration
 
-    ```python
-    wine['quality'].hist(figsize=(12,6), alpha=0.5)
-    plt.title('Quality Histogram')
-     ```
+```python
+   wine['quality'].hist(figsize=(12,6), alpha=0.5)
+   plt.title('Quality Histogram')
+```
    ![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/1.png)
      
 #### *Try your first TensorFlow program*

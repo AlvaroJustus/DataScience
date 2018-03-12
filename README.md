@@ -328,6 +328,14 @@ ypred_lin = SVMR_lin.predict(x_test)
 
 ![My image](https://cdn-images-1.medium.com/max/1600/1*9hQVcasuwx5ddq_s3MFCyw.gif)
 
+Comparing these metrics:
+
+* **MAE** is the easiest to understand because it is the average error.
+* **MSE** is more popular than MAE because MSE would "punish" bigger errors, which tends to be useful in the real world.
+* **RMSE** is even more popular than MSE, because the RMSE is interpretable in the "y" units.
+
+All these are loss functions because we want to minimize them.
+
 
 ```python
 >>> print('----- SVMR RBF MODEL -----')

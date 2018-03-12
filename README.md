@@ -243,9 +243,7 @@ SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
 avg / total       0.54      0.57      0.54       480
 ```
 
-* In this topic a **warning** is valid, The **GridSearchCV** code may take a long time to run, it works as a genetic algorithm that looks for the best parameters (user-selected) to minimize model errors.
-
-* Our focus adopted in this case, when working with classification models is the accuracy of the model. In the above case accuracy was 54%.
+* Our focus adopted in this case, when working with classification models is the accuracy of the model. In the above case accuracy was 54%. To try to optimize this same model, we will use the GridSearchCV method of Scikit-Learn, it works as a genetic algorithm that looks for the best parameters (user-selected) to minimize model errors. In this topic a **warning** is valid, The **GridSearchCV** code may take a long time to run.
 
 ### Apply GSCV (GridSearchCV) on SVMC
 
@@ -269,6 +267,7 @@ avg / total       0.54      0.57      0.54       480
 
 avg / total       0.59      0.62      0.60       480
 ```
+* After applying the GSCV it was possible to find the best parameters for this method and the results improved, the accuracy that initially was 54% is now at 59%.
 
 ### SVMR (Support Vector Machine Regression) Model without knowing the parameters
 

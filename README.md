@@ -389,7 +389,7 @@ RMSE: 0.637673663163
 
 ![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/12.png)
 
-* Falar sobre erros melhorados
+* It is possible to see an improvement means in the data after the use of GridSearchCV, both in the above noise graph and in the residue histogram.
 
 ```python
 >>> plt.figure(figsize=(16,8))

@@ -312,6 +312,23 @@ ypred_lin = SVMR_lin.predict(x_test)
 ```
 ![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/11.png)
 
+## Regression evaluation metrics
+
+* Here are three common evaluation metrics for regression problems:
+
+* **Mean absolute error** (MAE) is the mean of the absolute value of the errors:
+
+![My image](http://www.statisticshowto.com/wp-content/uploads/2016/10/MAE.png)
+
+* **Mean Squared Error** (MSE) is the mean of square errors:
+
+![My image](https://i.stack.imgur.com/iSWyZ.png)
+
+* **Root Mean Square Error** (RMSE) is the square root of the mean of the square errors:
+
+![My image](https://cdn-images-1.medium.com/max/1600/1*9hQVcasuwx5ddq_s3MFCyw.gif)
+
+
 ```python
 >>> print('----- SVMR RBF MODEL -----')
     print('MAE:', metrics.mean_absolute_error(y_test, ypred_rbf))
@@ -334,7 +351,6 @@ MAE: 0.477174626364
 MSE: 0.399302450458
 RMSE: 0.631903830071
 ```
-* Mean absolute error (MAE):
 
 ### Apply GSCV (GridSearchCV) on SVMR Model
 

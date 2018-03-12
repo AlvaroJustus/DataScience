@@ -467,7 +467,7 @@ avg / total       0.67      0.71      0.69       480
 
 ## Motivation
 
-* This work had as its only purpose the application of knowledge about data science and machine lerning techniques in a real case, with real data. Also apply the idea of BI (Business Intelligence) by taking only numbers and transform them into useful information of interest.
+* This work had as its only purpose the application of knowledge about data science and machine learning techniques in a real case, with real data. Also apply the idea of BI (Business Intelligence) by taking only numbers and transform them into useful information of interest.
 
 ## License
 

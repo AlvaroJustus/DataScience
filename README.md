@@ -9,7 +9,7 @@
 |--------------------|
 [![Scikit-Learn](https://elitedatascience.com/wp-content/uploads/2016/11/sklearn-logo.png)](http://scikit-learn.org)
 
-# **Wine Quality Analysis**
+# **Red Wine Quality Analysis**
 
 ## **Abstract**
 This work aims to perform an exploratory analysis in a database on the quality of red wines. The database consists 
@@ -479,3 +479,10 @@ ________________________________________________________________________________
 ### Author
 |Developed by Álvaro Justus, 2018.|
 |---------------------------------|
+
+* **Control and Automation Engineer**
+
+* [Linkedin](https://www.linkedin.com/in/alvaro-justus-5b6141b7/).
+* [Facebook](https://www.facebook.com/AlvaroJustus).
+* e-email: alvaro_justus@hotmail.com
+

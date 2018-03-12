@@ -477,7 +477,7 @@ avg / total       0.67      0.71      0.69       480
 _________________________________________________________________________________________________________________
 
 ### Author
-|Developed by Álvaro Justus, 2018 - Control and Automation Engineer|
+|Developed by Álvaro Justus, 2018 - Control and Automation Engineer.|
 |------------------------------------------------------------------|
 
 

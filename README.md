@@ -24,7 +24,7 @@ The goal is to model wine quality based on physicochemical tests (see [Cortez et
 
 ## Data Information ##
 |----------------------|-------------|----------------------------|------------|
-| Number of Instances: | *4898*      | Attribute Characteristics: | *Real*     |
+|`Number of Instances:`| *4898*      | Attribute Characteristics: | *Real*     |
 |----------------------|-------------|----------------------------|------------|
 |     Date Donated:    | *2009-10-07*|          Area:             | *Business* |
 |----------------------|-------------|----------------------------|------------|

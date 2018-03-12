@@ -54,6 +54,9 @@ Output variable (based on sensory data):
 
 [References](http://www3.dsi.uminho.pt/pcortez/wine5.pdf)
 
+## Goal:
+
+* Consists of identifying the model that best applies to classify and predict data using input classes to predict output (quality), using machine learning models in Python. Libraries will be used to provide support for the implementation of these models, such as Pandas, Seaborn and the famous Scikit-learn. For this, a preliminary and an exploratory analysis will be performed on the data, to understand the behavior of the variables, how their relationships are and what the best technique of machine learning to apply.
 
 ## Data Import and Preview: 
 ```shell
@@ -146,6 +149,7 @@ plt.title('Residual Sugar')
 ```
 ![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/5.png)
 
+* As it is possible to see in the graph presented above, the pH in the dataset behaves almost like a normal dissolution, having a mean of 3.311113195747343, a minimum of 2.740000 and a maximum of 4.010000 with a standard deviation of 0.154386. The pH does not really seem to vary significantly in the samples, but even so, we will keep it in the implementation of the machine learning models.
 
 #### *Try your first TensorFlow program*
 ```shell

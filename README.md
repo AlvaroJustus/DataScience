@@ -151,6 +151,26 @@ plt.title('Residual Sugar')
 
 * As it is possible to see in the graph presented above, the pH in the dataset behaves almost like a normal dissolution, having a mean of 3.311113195747343, a minimum of 2.740000 and a maximum of 4.010000 with a standard deviation of 0.154386. The pH does not really seem to vary significantly in the samples, but even so, we will keep it in the implementation of the machine learning models.
 
+```python
+>>> sns.jointplot(x='quality',y='fixed acidity',data=wine,kind='hex', size=9)
+```
+![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/6.png)
+
+* The above joint plot shows how the ratio of fixed acidity distributions (g (tartaric acid) / dm3) and wine quality is. It is possible to analyze that the concentration of fixed acidity is concentrated more between the values of 6 and 9 (g (tartaric acid) / dm3), with an average of 8.319637 (g (tartaric acid) / dm3). And that perhaps wines of notes 5 and 6 have a higher fixed acidity than the others (this may be due to the higher concentration of samples with these notes in the data).
+
+```python
+>>> plt.figure(figsize=(12,8))
+    sns.heatmap(wine.corr(),cmap='coolwarm',lw=1)
+```
+![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/7.png)
+
+* Finally a graph showing the correlation of the data in the dataset, in this graph we can verify if a linear regression model would apply well here (which was not the case to date). In this heatmap it is possible to verify the influence of one variable on the other and how strong or weak it is, I particularly like to make a heatmap for this analysis. It is possible to observe a strong positive correlation between critric acid and fixed acidity and between fixed acidity and density. A positive mean correlation between alcohol and quality. However, the most important analysis to take from this graph is that it is evident that a linear regression model would not have good results if applied in these data.
+
+```python
+>>> sns.pairplot(wine)
+```
+![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/8.png)
+
 #### *Try your first TensorFlow program*
 ```shell
 $ python

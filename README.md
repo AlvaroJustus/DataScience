@@ -453,6 +453,18 @@ RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
 avg / total       0.67      0.71      0.69       480
 ```
 
+## **Conclusion**
+
+* Five machine learning models were applied in this dataset and evaluated one by one to measure the accuracy and effectiveness of each of these methods in better serving this data model. The Random Florest model presented the best results regarding classification. In the regression part, it was previously verified that a common linear regression model would not be applied in this case (this due to the low correlation between the data), so the SVM (Vector Vector Machine) regression model was applied. The SVMR performed well after optimization using GridSearchCV to optimize its parameters (kernel, C, and gamma).
+
+## Future Actions
+
+* One possible solution would be to binarize quality, within the range of good and bad values. That is, transform quantitative data (grades 0 to 10 for quality) to qualitative (poor, intermediate, and good) and see if applied machine learning models (or even other models such as simple linear regression) apply better.
+
+* Another possible solution to optimize the accuracy of the models would be to try to discard parameters that do not influence wine quality so much and to see if there is an improvement in the efficiency of the results.
+
+* Apply techniques such as **Principal component analysis** (PCA), which consists of a mathematical procedure that uses an orthogonal transformation to help understand which parameters influence the quality of the wine.
+
 
 ## License
 

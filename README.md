@@ -269,6 +269,11 @@ avg / total       0.59      0.62      0.60       480
 ```
 * After applying the GSCV it was possible to find the best parameters for this method and the results improved, the accuracy that initially was 54% is now at 59%.
 
+
+### Regression Model
+
+* In the case below, we will apply a regression model, a peculiarity of regression models is that the metrics to measure the efficiency of the model are different in relation to the classification models. For classification models, we do not use the **classification_report** array or the **confusion_matrix array**. One way to evaluate is to plot differences (actual value - predicted value), waste histogram (real value - predicted value) and use the metrics to evaluate the error value.
+
 ### SVMR (Support Vector Machine Regression) Model without knowing the parameters
 
 ```python

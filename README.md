@@ -114,7 +114,10 @@ fixed acidity	volatile acidity	citric acid	residual sugar	chlorides	free sulfur 
     plt.title('Quality Histogram')
 ```
    ![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/1.png)
-     
+ 
+* As we can see, the quality of red wines in the dataset ranges from 3 to 8, with the highest number of notes being concentrated in 5 and 6. This means that the dataset contains more data about normal wines than good or bad wines.
+    
+    
 #### *Try your first TensorFlow program*
 ```shell
 $ python

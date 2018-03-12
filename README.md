@@ -327,8 +327,7 @@ RMSE: 0.631903830071
 ```
 * Mean absolute error (MAE):
 
-1n∑i=1n|yi−ŷ i|
-1n∑i=1n|yi−y^i|
+$$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
 
 
 ## License

@@ -36,22 +36,22 @@ For more information, read [Cortez et al., 2009](http://www3.dsi.uminho.pt/pcort
 
 Input variables (based on physicochemical tests):
 
-* 1 - fixed acidity
-* 2 - volatile acidity 
-* 3 - citric acid
-* 4 - residual sugar 
-* 5 - chlorides
-* 6 - free sulfur dioxide
-* 7 - total sulfur dioxide
-* 8 - density
+* 1 - Fixed acidity (g(tartaric acid)/dm3)
+* 2 - Volatile acidity (g(acetic acid)/dm3)
+* 3 - Citric acid (g/dm3)
+* 4 - Residual sugar (g/dm3)
+* 5 - Chlorides (g(sodium chloride)/dm3)
+* 6 - Free sulfur dioxide (mg/dm3)
+* 7 - Total sulfur dioxide (mg/dm3)
+* 8 - Density (g/cm3)
 * 9 - pH
-* 10 - sulphates
-* 11 - alcohol
+* 10 - Sulphates (g(potassium sulphate)/dm3)
+* 11 - Alcohol (% vol.)
 
 Output variable (based on sensory data):
 * 12 - quality (score between 0 and 10)
 
-
+[References](http://www3.dsi.uminho.pt/pcortez/wine5.pdf)
 
 #### *Try your first TensorFlow program*
 ```shell

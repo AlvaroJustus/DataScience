@@ -354,6 +354,46 @@ RMSE: 0.637673663163
 ```
 * **WARNING: This code [grid.fit(X_train,y_train)] may take a long time to run, it works as a genetic algorithm that looks for the best parameters (user-selected) to minimize model errors. On my computer the code took about 2 hours to execute completely with the parameters placed above.**
 
+![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/12.png)
+
+* Falar sobre erros melhorados
+
+```python
+>>> plt.figure(figsize=(16,8))
+    sns.distplot((y_test-grid_predictions),bins=50,label='RBF model')
+```
+![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/13.png)
+
+### Decision Tree Model and Random Florest Model
+
+#### Decision Tree Model
+
+```python
+>>> from sklearn.tree import DecisionTreeClassifier
+>>> dtree = DecisionTreeClassifier()
+>>> dtree.fit(X_train,y_train)
+DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, presort=False, random_state=None,
+            splitter='best')
+>>> predictions = dtree.predict(x_test)
+>>> print(classification_report(y_test,predictions))
+             precision    recall  f1-score   support
+
+          3       0.00      0.00      0.00         4
+          4       0.08      0.07      0.07        15
+          5       0.62      0.75      0.68       188
+          6       0.67      0.52      0.59       198
+          7       0.55      0.63      0.59        68
+          8       0.00      0.00      0.00         7
+
+avg / total       0.60      0.60      0.59       480
+
+```
+
+
 
 ## License
 

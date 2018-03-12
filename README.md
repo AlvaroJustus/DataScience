@@ -465,7 +465,13 @@ avg / total       0.67      0.71      0.69       480
 
 * Apply techniques such as **Principal component analysis** (PCA), which consists of a mathematical procedure that uses an orthogonal transformation to help understand which parameters influence the quality of the wine.
 
+## Motivation
+
+* This work had as its only purpose the application of knowledge about data science and machine lerning techniques in a real case, with real data. Also apply the idea of BI (Business Intelligence) by taking only numbers and transform them into useful information of interest.
 
 ## License
 
 [MIT](LICENSE)
+
+
+Developed by Álvaro Justus.

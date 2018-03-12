@@ -295,6 +295,41 @@ ypred_lin = SVMR_lin.predict(x_test)
 ```
 ![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/10.png)
 
+```python
+>>> plt.figure(figsize=(16,8))
+    plt.plot(range(0,480),y_test-ypred_rbf, label='RBF model')
+    plt.plot(range(0,480),y_test-ypred_lin,c='r', label='Linear model')
+    plt.legend()
+```
+![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/11.png)
+
+```python
+>>> print('----- SVMR RBF MODEL -----')
+    print('MAE:', metrics.mean_absolute_error(y_test, ypred_rbf))
+    print('MSE:', metrics.mean_squared_error(y_test, ypred_rbf))
+    print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, ypred_rbf)))
+    print('\n')
+    print('----- SVMR LINEAR MODEL -----')
+    print('MAE:', metrics.mean_absolute_error(y_test, ypred_lin))
+    print('MSE:', metrics.mean_squared_error(y_test, ypred_lin))
+    print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, ypred_lin)))
+    
+----- SVMR RBF MODEL -----
+MAE: 0.504853322096
+MSE: 0.46301364554
+RMSE: 0.680451060357
+
+
+----- SVMR LINEAR MODEL -----
+MAE: 0.477174626364
+MSE: 0.399302450458
+RMSE: 0.631903830071
+```
+* Mean absolute error (MAE):
+
+1n∑i=1n|yi−ŷ i|
+1n∑i=1n|yi−y^i|
+
 
 ## License
 

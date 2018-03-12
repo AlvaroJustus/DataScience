@@ -116,8 +116,20 @@ fixed acidity	volatile acidity	citric acid	residual sugar	chlorides	free sulfur 
    ![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/1.png)
  
 * As we can see, the quality of red wines in the dataset ranges from 3 to 8, with the highest number of notes being concentrated in 5 and 6. This means that the dataset contains more data about normal wines than good or bad wines.
-    
-    
+
+```python
+>>> plt.figure(figsize=(16,12))
+sns.countplot(y='residual sugar',data=wine[wine['quality']>=7], palette='RdBu',hue='quality')
+plt.title('Residual Sugar')
+```
+  ![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/2.png)
+  
+* By using the barplot by relating the amount of residual sugar by splitting the data between the wines between notes 7 and 8, it is possible to verify that the dataset concentrates data with a residual amount of sugar between 1.7 (g / dm3) and 2.5 (g / dm3) both for wines of note 7 and 8.
+
+```python
+>>> sns.jointplot(x='quality', y='residual sugar',data=wine,size=9, color='r',alpha=0.6)
+```
+
 #### *Try your first TensorFlow program*
 ```shell
 $ python

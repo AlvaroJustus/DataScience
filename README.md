@@ -58,7 +58,7 @@ Output variable (based on sensory data):
 
 * Consists of identifying the model that best applies to classify and predict data using input classes to predict output (quality), using machine learning models in Python. Libraries will be used to provide support for the implementation of these models, such as Pandas, Seaborn and the famous Scikit-learn. For this, a preliminary and an exploratory analysis will be performed on the data, to understand the behavior of the variables, how their relationships are and what the best technique of machine learning to apply.
 
-## Data Import and Preview: 
+### Data Import and Preview: 
 ```shell
 $ python
 ```
@@ -167,52 +167,19 @@ plt.title('Residual Sugar')
 * Finally a graph showing the correlation of the data in the dataset, in this graph we can verify if a linear regression model would apply well here (which was not the case to date). In this heatmap it is possible to verify the influence of one variable on the other and how strong or weak it is, I particularly like to make a heatmap for this analysis. It is possible to observe a strong positive correlation between critric acid and fixed acidity and between fixed acidity and density. A positive mean correlation between alcohol and quality. However, the most important analysis to take from this graph is that it is evident that a linear regression model would not have good results if applied in these data.
 
 ```python
->>> sns.pairplot(wine)
+>>> sns.pairplot(wine, hue='quality')
 ```
 ![My image](https://github.com/AlvaroJustus/Machine-Learning-Wine-Quality/blob/master/Docs/Images/8.png)
 
-#### *Try your first TensorFlow program*
-```shell
-$ python
-```
-```python
->>> import tensorflow as tf
->>> hello = tf.constant('Hello, TensorFlow!')
->>> sess = tf.Session()
->>> sess.run(hello)
-'Hello, TensorFlow!'
->>> a = tf.constant(10)
->>> b = tf.constant(32)
->>> sess.run(a + b)
-42
->>> sess.close()
-```
+
 
 ## Contribution guidelines
 
-**If you want to contribute to TensorFlow, be sure to review the [contribution
-guidelines](CONTRIBUTING.md). This project adheres to TensorFlow's
-[code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to
-uphold this code.**
 
-**We use [GitHub issues](https://github.com/tensorflow/tensorflow/issues) for
-tracking requests and bugs. So please see
-[TensorFlow Discuss](https://groups.google.com/a/tensorflow.org/forum/#!forum/discuss) for general questions
-and discussion, and please direct specific questions to [Stack Overflow](https://stackoverflow.com/questions/tagged/tensorflow).**
-
-The TensorFlow project strives to abide by generally accepted best practices in open-source software development:
-
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1486/badge)](https://bestpractices.coreinfrastructure.org/projects/1486)
 
 ## For more information
 
-* [TensorFlow Website](https://www.tensorflow.org)
-* [TensorFlow White Papers](https://www.tensorflow.org/about/bib)
-* [TensorFlow Model Zoo](https://github.com/tensorflow/models)
-* [TensorFlow MOOC on Udacity](https://www.udacity.com/course/deep-learning--ud730)
-* [TensorFlow Course at Stanford](https://web.stanford.edu/class/cs20si)
 
-Learn more about the TensorFlow community at the [community page of tensorflow.org](https://www.tensorflow.org/community) for a few ways to participate.
 
 ## License
 

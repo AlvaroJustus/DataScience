@@ -30,7 +30,7 @@ The goal is to model wine quality based on physicochemical tests (see [Cortez et
 
 * There are 12 classes that make up the dataset. There is no previous information about any class, so it is necessary to analyze the influence and relevance of each one.
 
-**Attribute Information:**
+**Attribute Information**
 
 For more information, read [Cortez et al., 2009](http://www3.dsi.uminho.pt/pcortez/wine/). 
 
@@ -54,11 +54,11 @@ Output variable (based on sensory data):
 
 [References](http://www3.dsi.uminho.pt/pcortez/wine5.pdf)
 
-## Goal:
+## Goal
 
 * Consists of identifying the model that best applies to classify and predict data using input classes to predict output (quality), using machine learning models in Python. Libraries will be used to provide support for the implementation of these models, such as Pandas, Seaborn and the famous Scikit-learn. For this, a preliminary and an exploratory analysis will be performed on the data, to understand the behavior of the variables, how their relationships are and what the best technique of machine learning to apply.
 
-### Data Import and Preview: 
+### Data Import and Preview 
 
 ```python
 >>> import pandas as pd
@@ -172,8 +172,8 @@ plt.title('Residual Sugar')
 
 * Click on the image to enlarge it. Finally a pairplot, relating the distributions of all variances with each other, divided by the quality of the wines. I really like this chart and I consider it of utmost importance to check which method best applies to handle a dataset. You can see that there is a lot of data overlapping and a strong grouping, which means that it will be difficult to classify data so precisely. However, since quality is given discreetly and the output of the model is based on it, it may be possible to obtain good results without the need to transform the quantitative data (from 0 to 10) to qualitative (bad, intermediate and good) data.
 
-## Contribution guidelines
-
+## Pré-Conclusion
+* 
 
 
 ## For more information
